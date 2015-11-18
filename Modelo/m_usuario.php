@@ -109,7 +109,7 @@ class UsuarioModel{
             else
             {
                  if ($this->rol == '1') {
-                     $sql1 = "select CONCAT(acad_matr_persona.pers_primnombre,' ', acad_matr_persona.pers_segnombre) as Nombres,
+                     $sql1 = "select acad_matr_persona.pers_nombres as Nombres,
                       CONCAT(acad_matr_persona.pers_apepaterno,' ', acad_matr_persona.pers_apematerno) as Apellidos
                       ,
                       acad_matr_detperstipomedio.dptm_descripcion as Correo,                     
@@ -139,7 +139,7 @@ class UsuarioModel{
                       }
                        $this->cargo="Estudiante";
                  }else{
-                    $sql1 = "select CONCAT(acad_matr_persona.pers_primnombre,' ', acad_matr_persona.pers_segnombre) as Nombres,
+                    $sql1 = "select acad_matr_persona.pers_nombres as Nombres,
                       CONCAT(acad_matr_persona.pers_apepaterno,' ', acad_matr_persona.pers_apematerno) as Apellidos
                       ,
                       acad_matr_detperstipomedio.dptm_descripcion as Correo,
