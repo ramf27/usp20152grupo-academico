@@ -51,8 +51,13 @@ class conexion{
 	public function execute($sql){
             if($this->open()){
                 $r = mysql_query($sql);
+                $er= mysql_error();
                 $this->close();
-                return $r;
+                if ($er=="") {
+                  return $r;
+                }{
+                     return $er;
+                }
             }
             return false;
 	}
